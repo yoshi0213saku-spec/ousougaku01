@@ -118,9 +118,9 @@
                                 AIによる解析ポイント
                             </h4>
                             <ul class="space-y-2 text-[13px] text-gray-600">
-                                <li><strong>1. 動静の機:</strong> 動き出しの瞬間における重心移動の最小化を解析。</li>
-                                <li><strong>2. 陰陽の変換:</strong> 筋出力のON/OFF（虚実）をミリ秒単位で可視化。</li>
-                                <li><strong>3. 捨己従人:</strong> 相手のベクトルに対する適応アルゴリズムの解明。</li>
+                                <li><strong>1. 腸腰筋の深層操作:</strong> 表面的な筋力に頼らない、深層筋による骨盤制御の解析。</li>
+                                <li><strong>2. 地面反力のベクトル化:</strong> 重力をエネルギーへと変換する物理的プロセスの解明。</li>
+                                <li><strong>3. 脱力と弾性エネルギー:</strong> 完全にリラックスした状態から放たれる爆発的な勁力の正体。</li>
                             </ul>
                         </div>
                     </div>
@@ -144,7 +144,7 @@
             <!-- オーディオプレイヤーカード -->
             <div class="glass-card rounded-3xl p-8 border border-gray-100">
                 <div class="flex items-center justify-between mb-6">
-                    <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">Theory Analysis Audio</span>
+                    <span class="text-xs font-bold text-blue-600 uppercase tracking-widest text-blue-600">Theory Analysis Audio</span>
                     <span id="playing-indicator" class="text-[10px] text-gray-400 font-medium">待機中...</span>
                 </div>
                 <audio id="main-audio" controls class="w-full h-10 mb-8 focus:outline-none">
@@ -153,7 +153,7 @@
 
                 <div class="space-y-4" id="playlist">
                     <!-- トラック1 -->
-                    <div onclick="playTrack('./taichi-theory-01.mp3', '太極拳論：陰陽の力学', '「偏らず、倚らず」という教えが、いかに姿勢制御の効率を高めるかを解説します。', this)" 
+                    <div onclick="playTrack('./talk-tyoyokin-01.mp3', '腸腰筋と地面反力で放つ究極の勁力', '「勁力」の源泉としての腸腰筋。骨盤の傾斜と地面からの反力をいかに連動させ、効率的に力を伝達するかを解析します。', this)" 
                          class="group cursor-pointer p-5 rounded-2xl border border-gray-100 hover:border-blue-200 hover:bg-white transition-all duration-300">
                         <div class="flex items-center justify-between">
                             <div class="flex items-center space-x-4">
@@ -161,8 +161,8 @@
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" /></svg>
                                 </div>
                                 <div>
-                                    <h4 class="text-sm font-bold text-gray-800">太極拳論：陰陽の力学</h4>
-                                    <p class="text-[10px] text-gray-400 uppercase mt-1">wang-theory01 • 5:20</p>
+                                    <h4 class="text-sm font-bold text-gray-800">腸腰筋と地面反力で放つ究極の勁力</h4>
+                                    <p class="text-[10px] text-gray-400 uppercase mt-1">talk-tyoyokin-01 • 5:12</p>
                                 </div>
                             </div>
                             <span class="text-xs text-blue-400 font-bold">01</span>
@@ -170,7 +170,7 @@
                     </div>
 
                     <!-- トラック2 -->
-                    <div onclick="playTrack('./taichi-theory-02.mp3', '捨己従人の神経適応', '相手の動きに従う「粘・連・黏・随」の状態を、AIが反射速度の視点から分析。', this)" 
+                    <div onclick="playTrack('./talk-gourisei-01.mp3', '太極拳の合理性は脱力と地面反力にあり', '「脱力」が単なる弛緩ではなく、効率的な地面反力の獲得（力学的合理性）であることをバイオメカニクスの視点から説きます。', this)" 
                          class="group cursor-pointer p-5 rounded-2xl border border-gray-100 hover:border-blue-200 hover:bg-white transition-all duration-300">
                         <div class="flex items-center justify-between">
                             <div class="flex items-center space-x-4">
@@ -178,8 +178,8 @@
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" /></svg>
                                 </div>
                                 <div>
-                                    <h4 class="text-sm font-bold text-gray-800">捨己従人の神経適応</h4>
-                                    <p class="text-[10px] text-gray-400 uppercase mt-1">wang-theory02 • 4:45</p>
+                                    <h4 class="text-sm font-bold text-gray-800">太極拳の合理性は脱力と地面反力にあり</h4>
+                                    <p class="text-[10px] text-gray-400 uppercase mt-1">talk-gourisei-01 • 4:38</p>
                                 </div>
                             </div>
                             <span class="text-xs text-blue-400 font-bold">02</span>
@@ -196,17 +196,19 @@
                             <path d="M2 6a2 2 0 012-2h12a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" />
                             <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 8l4 2-4 2V8z" />
                         </svg>
-                        Theory Visualizer
+                        AI Video Commentary
                     </span>
-                    <a href="#" class="text-[10px] text-emerald-600 font-bold hover:underline uppercase">AI解説動画 →</a>
+                    <a href="https://youtu.be/acOhVIgnBt4" target="_blank" class="text-[10px] text-emerald-600 font-bold hover:underline uppercase">YouTubeで視聴 →</a>
                 </div>
                 <h4 class="text-lg font-bold text-gray-800 leading-tight mb-4">
-                    「四両撥千斤」の物理演算シミュレーション
+                    動画解説：「心地よい力」のパラドックス
                 </h4>
-                <p class="text-sm text-gray-500 mb-6">「四両をもって千斤を撥（はつ）す」ための支点と力点の関係を可視化しました。</p>
-                <button class="inline-flex items-center px-8 py-3 bg-white border-2 border-emerald-500 text-emerald-600 font-bold rounded-2xl hover:bg-emerald-500 hover:text-white transition-all duration-300 shadow-sm">
-                    シミュレーションを見る
-                </button>
+                <p class="text-sm text-gray-500 mb-6">
+                    身体の緊張を解き、自然な流動性を生み出すためのバイオメカニクス的考察。脱力の中に宿る真の強さを探究します。
+                </p>
+                <a href="https://youtu.be/acOhVIgnBt4" target="_blank" class="inline-flex items-center px-8 py-3 bg-white border-2 border-emerald-500 text-emerald-600 font-bold rounded-2xl hover:bg-emerald-500 hover:text-white transition-all duration-300 shadow-sm">
+                    視聴を開始する
+                </a>
             </div>
 
             <!-- AI Insight 表示エリア -->
