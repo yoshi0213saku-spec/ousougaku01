@@ -20,7 +20,6 @@
             color: var(--text-main);
         }
 
-        /* タイトル書体設定 */
         .title-serif {
             font-family: 'Noto Serif JP', serif;
             font-weight: 900;
@@ -35,7 +34,6 @@
             text-indent: 0.4em;
         }
 
-        /* 資料館カードスタイル */
         .glass-card {
             background: rgba(255, 255, 255, 0.8);
             backdrop-filter: blur(10px);
@@ -66,7 +64,6 @@
 
     <div class="max-w-2xl mx-auto px-4 py-8 md:py-12">
         
-        <!-- 総合案内へ戻るボタン -->
         <nav class="mb-8 fade-in">
             <a href="https://yoshi0213saku-spec.github.io/deji-sogouannai01/" class="inline-flex items-center space-x-2 text-gray-400 hover:text-blue-600 transition-colors duration-300 group">
                 <div class="w-8 h-8 rounded-full bg-white border border-gray-100 flex items-center justify-center shadow-sm group-hover:border-blue-100 group-hover:bg-blue-50">
@@ -78,8 +75,7 @@
             </a>
         </nav>
 
-        <!-- ヘッダーセクション -->
-        <header class="text-center mb-12 fade-in" style="animation-delay: 0.05s;">
+        <header class="text-center mb-12 fade-in">
             <div class="inline-flex items-center space-x-2 bg-blue-50 px-4 py-1.5 rounded-full mb-6">
                 <span class="relative flex h-2 w-2">
                     <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
@@ -89,20 +85,16 @@
             </div>
             
             <div class="space-y-3">
-                <p class="text-xs md:text-base title-sub uppercase">
-                    AIが読み解く 太極拳の聖典
-                </p>
+                <p class="text-xs md:text-base title-sub uppercase">AIが読み解く 太極拳の聖典</p>
                 <h1 class="text-2xl md:text-4xl text-gray-900 title-serif">
                     「王宗岳 <span class="text-blue-600">太極拳論</span>」
                 </h1>
             </div>
         </header>
 
-        <div class="space-y-8 fade-in" style="animation-delay: 0.1s;">
-            
-            <!-- メインアーカイブカード -->
+        <div class="space-y-8 fade-in">
+            <!-- 概要カード -->
             <div class="glass-card rounded-3xl p-8 space-y-10 border border-gray-100 shadow-sm">
-                <!-- アーカイブ概要 -->
                 <section>
                     <h2 class="text-xs font-bold text-blue-500 uppercase tracking-[0.3em] mb-4">Archive Overview</h2>
                     <h3 class="text-lg font-bold mb-4 text-gray-800">アーカイブ概要</h3>
@@ -111,7 +103,6 @@
                     </p>
                     
                     <div class="space-y-6">
-                        <!-- AI解析の焦点 -->
                         <div class="bg-blue-50/40 p-5 rounded-2xl border border-blue-50">
                             <h4 class="text-sm font-black text-gray-800 mb-3 flex items-center">
                                 <span class="w-2 h-2 bg-blue-600 rounded-full mr-2 shadow-sm"></span>
@@ -125,44 +116,31 @@
                         </div>
                     </div>
                 </section>
-
-                <hr class="border-gray-100">
-
-                <!-- 今回のテーマ -->
-                <section>
-                    <h2 class="text-xs font-bold text-gray-400 uppercase tracking-[0.3em] mb-4">Core Principles</h2>
-                    <h3 class="text-xl font-bold mb-4 text-gray-800">太極とは無極より生じ<br><span class="text-gray-500 text-lg">〜陰陽の動静、機を制する〜</span></h3>
-                    <div class="bg-white/60 border border-blue-50 rounded-2xl p-6 shadow-sm text-gray-700">
-                        <p class="text-sm leading-relaxed">
-                            「太極拳論」の冒頭で語られる<strong class="text-blue-700">「動けば分かれ、静まれば合わさる」</strong>という一節。これは現代のバイオメカニクスにおいて、全身の連動（Kinetic Chain）と中心軸の安定性を指しています。<br><br>
-                            AI解析によれば、王宗岳の説く「重きを避けて軽きに就く」という教えは、摩擦力を最大化しつつ相手の慣性を利用する、高度な幾何学的戦略であることが証明されました。力ではなく「理」で制する太極拳の本質に迫ります。
-                        </p>
-                    </div>
-                </section>
             </div>
 
             <!-- オーディオプレイヤーカード -->
             <div class="glass-card rounded-3xl p-8 border border-gray-100">
                 <div class="flex items-center justify-between mb-6">
-                    <span class="text-xs font-bold text-blue-600 uppercase tracking-widest text-blue-600">Theory Analysis Audio</span>
+                    <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">Theory Analysis Audio</span>
                     <span id="playing-indicator" class="text-[10px] text-gray-400 font-medium">待機中...</span>
                 </div>
+                
                 <audio id="main-audio" controls class="w-full h-10 mb-8 focus:outline-none">
                     お使いのブラウザはオーディオ再生に対応していません。
                 </audio>
 
                 <div class="space-y-4" id="playlist">
                     <!-- トラック1 -->
-                    <div onclick="playTrack('./talk-tyoyokin-01.mp3', '腸腰筋と地面反力で放つ究極の勁力', '「勁力」の源泉としての腸腰筋。骨盤の傾斜と地面からの反力をいかに連動させ、効率的に力を伝達するかを解析します。', this)" 
+                    <div onclick="playTrack('talk-tyoyokin-01.mp3', '腸腰筋と地面反力で放つ究極の勁力', '「勁力」の源泉としての腸腰筋。骨盤の傾斜と地面からの反力をいかに連動させ、効率的に力を伝達するかを解析します。', this)" 
                          class="group cursor-pointer p-5 rounded-2xl border border-gray-100 hover:border-blue-200 hover:bg-white transition-all duration-300">
                         <div class="flex items-center justify-between">
                             <div class="flex items-center space-x-4">
                                 <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-500 group-hover:bg-blue-600 group-hover:text-white transition-colors">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" /></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"/></svg>
                                 </div>
                                 <div>
                                     <h4 class="text-sm font-bold text-gray-800">腸腰筋と地面反力で放つ究極の勁力</h4>
-                                    <p class="text-[10px] text-gray-400 uppercase mt-1">talk-tyoyokin-01 • 5:12</p>
+                                    <p class="text-[10px] text-gray-400 uppercase mt-1">File: talk-tyoyokin-01.mp3</p>
                                 </div>
                             </div>
                             <span class="text-xs text-blue-400 font-bold">01</span>
@@ -170,16 +148,16 @@
                     </div>
 
                     <!-- トラック2 -->
-                    <div onclick="playTrack('./talk-gourisei-01.mp3', '太極拳の合理性は脱力と地面反力にあり', '「脱力」が単なる弛緩ではなく、効率的な地面反力の獲得（力学的合理性）であることをバイオメカニクスの視点から説きます。', this)" 
+                    <div onclick="playTrack('talk-gourisei-01.mp3', '太極拳の合理性は脱力と地面反力にあり', '「脱力」が単なる弛緩ではなく、効率的な地面反力の獲得（力学的合理性）であることをバイオメカニクスの視点から説きます。', this)" 
                          class="group cursor-pointer p-5 rounded-2xl border border-gray-100 hover:border-blue-200 hover:bg-white transition-all duration-300">
                         <div class="flex items-center justify-between">
                             <div class="flex items-center space-x-4">
                                 <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-500 group-hover:bg-blue-600 group-hover:text-white transition-colors">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" /></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"/></svg>
                                 </div>
                                 <div>
                                     <h4 class="text-sm font-bold text-gray-800">太極拳の合理性は脱力と地面反力にあり</h4>
-                                    <p class="text-[10px] text-gray-400 uppercase mt-1">talk-gourisei-01 • 4:38</p>
+                                    <p class="text-[10px] text-gray-400 uppercase mt-1">File: talk-gourisei-01.mp3</p>
                                 </div>
                             </div>
                             <span class="text-xs text-blue-400 font-bold">02</span>
@@ -188,47 +166,40 @@
                 </div>
             </div>
 
-            <!-- 動画リンクカード -->
+            <!-- 動画リンク（更新済み） -->
             <div class="glass-card rounded-3xl p-8 border-l-8 border-emerald-500">
                 <div class="flex items-center justify-between mb-4">
                     <span class="text-xs font-bold text-emerald-600 uppercase tracking-widest flex items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1.5" viewBox="0 0 20 20" fill="currentColor">
-                            <path d="M2 6a2 2 0 012-2h12a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" />
-                            <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 8l4 2-4 2V8z" />
+                            <path d="M2 6a2 2 0 012-2h12a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" /><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 8l4 2-4 2V8z" />
                         </svg>
                         AI Video Commentary
                     </span>
-                    <a href="https://youtu.be/acOhVIgnBt4" target="_blank" class="text-[10px] text-emerald-600 font-bold hover:underline uppercase">YouTubeで視聴 →</a>
+                    <a href="https://youtu.be/neaVcZYBlO0" target="_blank" class="text-[10px] text-emerald-600 font-bold hover:underline uppercase">YouTubeで視聴 →</a>
                 </div>
-                <h4 class="text-lg font-bold text-gray-800 leading-tight mb-4">
-                    動画解説：「心地よい力」のパラドックス
-                </h4>
+                <h4 class="text-lg font-bold text-gray-800 leading-tight mb-4">動画解説：太極拳に秘められた力</h4>
                 <p class="text-sm text-gray-500 mb-6">
-                    身体の緊張を解き、自然な流動性を生み出すためのバイオメカニクス的考察。脱力の中に宿る真の強さを探究します。
+                    一見穏やかな動きの裏側に隠された、驚異的な身体操作とエネルギーの伝達効率をAIが解き明かします。
                 </p>
-                <a href="https://youtu.be/acOhVIgnBt4" target="_blank" class="inline-flex items-center px-8 py-3 bg-white border-2 border-emerald-500 text-emerald-600 font-bold rounded-2xl hover:bg-emerald-500 hover:text-white transition-all duration-300 shadow-sm">
+                <a href="https://youtu.be/neaVcZYBlO0" target="_blank" class="inline-flex items-center px-8 py-3 bg-white border-2 border-emerald-500 text-emerald-600 font-bold rounded-2xl hover:bg-emerald-500 hover:text-white transition-all duration-300 shadow-sm">
                     視聴を開始する
                 </a>
             </div>
 
-            <!-- AI Insight 表示エリア -->
+            <!-- AI Insight -->
             <div id="ai-insight-panel" class="hidden glass-card rounded-3xl p-8 bg-blue-600 text-white shadow-xl shadow-blue-200/40 border border-blue-500">
                 <div class="flex items-center space-x-2 mb-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-200" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
                     <span class="text-xs font-bold uppercase tracking-widest">AI Master's Insight</span>
                 </div>
                 <p id="ai-insight-text" class="text-base leading-relaxed font-bold"></p>
             </div>
 
-            <!-- キュレーター紹介 -->
+            <!-- Curator -->
             <div class="glass-card rounded-3xl p-10 text-center mt-12 border border-gray-100">
                 <p class="text-[10px] text-gray-400 uppercase tracking-[0.4em] mb-6 font-bold">Authorized Curator</p>
                 <div class="relative w-20 h-20 mx-auto mb-6 text-blue-600 flex items-center justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
                 </div>
                 <h4 class="text-xl font-bold text-gray-900 mb-1">中島 義健</h4>
                 <p class="text-sm text-blue-600 font-bold mb-4">日本武術太極拳連盟 会員</p>
@@ -242,7 +213,7 @@
     </div>
 
     <script>
-        function playTrack(url, title, insight, element) {
+        function playTrack(filename, title, insight, element) {
             const audio = document.getElementById('main-audio');
             const indicator = document.getElementById('playing-indicator');
             const insightPanel = document.getElementById('ai-insight-panel');
@@ -251,14 +222,16 @@
             document.querySelectorAll('#playlist > div').forEach(el => el.classList.remove('track-active', 'bg-white', 'shadow-md'));
             element.classList.add('track-active', 'bg-white', 'shadow-md');
 
-            audio.src = url;
-            indicator.innerText = "読込中...";
+            const audioPath = './' + filename; 
+            
+            audio.src = audioPath;
+            indicator.innerText = "読み込み中...";
             
             audio.play().then(() => {
                 indicator.innerText = "再生中: " + title;
             }).catch(error => {
-                console.warn("Playback error:", error);
-                indicator.innerHTML = '<span class="text-red-500 font-bold">音声ファイルがまだセットされていません</span>';
+                console.error("Playback failed:", audioPath, error);
+                indicator.innerHTML = `<span class="text-red-500 font-bold">エラー: ファイルが見つかりません (${filename})</span>`;
             });
 
             insightPanel.classList.remove('hidden');
